@@ -1,4 +1,5 @@
 export class Employee {
+    /*
     name: string;
     id: number;
     basicPay: number;
@@ -12,7 +13,10 @@ export class Employee {
         this.daPay = daPay;
         this.hraPay = hraPay;
     }
+*/
+    constructor(public name: string, public id: number, public basicPay: number, public daPay: number, public hraPay: number) {
 
+    }
     calculateSalary(): number {
         return this.basicPay + this.daPay + this.hraPay;
     }
