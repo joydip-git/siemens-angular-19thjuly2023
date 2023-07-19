@@ -6,4 +6,7 @@ export class EmployeeRepository {
     static get Employees(): Employee[] {
         return this.employees
     }
+    static set Employees(newArr: Employee[]) {
+        this.employees = newArr
+    }
 }

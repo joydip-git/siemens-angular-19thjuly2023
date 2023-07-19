@@ -21,3 +21,7 @@ export class Employee {
         return this.basicPay + this.daPay + this.hraPay;
     }
 }
+
+// module.exports = {
+//     Employee
+// }

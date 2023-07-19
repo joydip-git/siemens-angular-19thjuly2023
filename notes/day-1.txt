@@ -1,4 +1,5 @@
 https://github.com/joydip-git/siemens-angular-19thjuly2023
+npm commands: https://docs.npmjs.com/cli/v6/commands
 
 Angular:
 	pre-requisites:
@@ -41,5 +42,23 @@ Developer: name, id, basic, da, hra, incentive
 
 Hr: name, id, basic, da, hra, gratuity
 		       calculateSalary():number
+
+command to create package.json file using "npm":
+>npm init
+or
+>npm init --yes
+
+install typescript compiler (development dependency):
+>npm i typescript -D
+
+to create tsconfig.json file using "tsc":
+>.\node_modules\.bin\tsc --init
+
+
+modules in JS/TS:
+a. common js format 
+b. es6 module format
+c. asynchronous module definition (amd) format
+d. universal module definition (umd)
 
 

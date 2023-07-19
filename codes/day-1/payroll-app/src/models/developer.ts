@@ -1,5 +1,5 @@
 import { Employee } from "./employee";
-
+//const { Employee } = require('./employee')
 export class Developer extends Employee {
 
     /*

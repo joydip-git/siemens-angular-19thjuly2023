@@ -10,10 +10,9 @@ export class EmployeeManager implements IManager<Employee>{
             for (const e of employeeArr) {
                 if (e.id === obj.id) {
                     status = true
-                    break;
+                    return false
                 }
             }
-            return false
         }
         if (!status) {
             employeeArr.push(obj)
@@ -23,7 +22,7 @@ export class EmployeeManager implements IManager<Employee>{
     delete(id: number): boolean {
         const empArr = EmployeeRepository.Employees
         const index = empArr.findIndex(
-            function (e) {
+            function (e: Employee) {
                 return e.id === id
             }
         )
@@ -35,15 +34,17 @@ export class EmployeeManager implements IManager<Employee>{
             return false
     }
     update(obj: Employee, id: number): boolean {
-        const empArr = EmployeeRepository.Employees
-        const index = empArr.findIndex(
-            function (e) {
+        let empArr = EmployeeRepository.Employees
+        const copy = [...empArr]
+        const index = copy.findIndex(
+            function (e: Employee) {
                 return e.id === id
             }
         )
         //if (found !== undefined) {
         if (index !== -1) {
-            empArr.splice(index, 1, obj)
+            copy.splice(index, 1, obj)
+            EmployeeRepository.Employees = copy
             return true
         } else
             return false
@@ -59,7 +60,7 @@ export class EmployeeManager implements IManager<Employee>{
     fetch(id: number): Employee | undefined {
         const emps = EmployeeRepository.Employees
         const found = emps.find(
-            (e) => e.id === id
+            (e: Employee) => e.id === id
         )
         return found
     }
