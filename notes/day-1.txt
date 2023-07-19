@@ -36,4 +36,10 @@ ECMA:
 ES6+
 2015 => const, let, arrow function[const add = (a:number, b: number)=>a+b]
 
+Developer: name, id, basic, da, hra, incentive
+		       calculateSalary():number
+
+Hr: name, id, basic, da, hra, gratuity
+		       calculateSalary():number
+
 
