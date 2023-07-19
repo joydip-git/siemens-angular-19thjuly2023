@@ -1,0 +1,39 @@
+https://github.com/joydip-git/siemens-angular-19thjuly2023
+
+Angular:
+	pre-requisites:
+	JavaScript and TypeScript
+
+Learning path:
+	JavaScript
+	New features of JS: ES6+
+	Node JS
+
+Angular:  client-side JS framework
+				SPA
+				
+
+HTML elements:
+	in-line
+	block
+
+
+CSS style precedence:
+browser
+	outline
+		inline
+
+chrome: v8
+safari: JSCore
+firefox: Spidermonkey
+
+Ryan Dahl => node js
+node js is built at the top of v8 engine
+
+ECMA:
+	ECMAScript => 
+1994 - 2014 => ES1, 2, 3, 4, 5
+ES6+
+2015 => const, let, arrow function[const add = (a:number, b: number)=>a+b]
+
+

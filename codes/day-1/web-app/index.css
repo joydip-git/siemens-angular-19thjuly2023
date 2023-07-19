@@ -1,0 +1,31 @@
+/* element selector */
+/* h2 {
+            text-align: center;
+            background-color: burlywood;
+            font-family: 'Courier New', Courier, monospace;
+        } */
+
+/* id selector */
+/* #firstHeader {
+            text-align: center;
+            background-color: burlywood;
+            font-family: 'Courier New', Courier, monospace;
+        } */
+.common-style {
+  text-align: center;
+}
+
+.header-style {
+  background-color: burlywood;
+  font-family: "Courier New", Courier, monospace;
+}
+.img-style {
+  margin: 2px;
+  width: 50px;
+}
+.button-style {
+  background-color: blueviolet;
+  color: white;
+  border: 1px solid blueviolet;
+  border-radius: 5px;
+}
