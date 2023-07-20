@@ -1,2 +1,33 @@
 promise
 rxjs - observable, observer, operators, subject etc.
+
+angular assets:					decorator functions:				package
+	component: class 			@Component()							@angular/core
+	directive: class			@Directive()							@angular/core
+	pipe: class					@Pipe()									@angular/core		
+
+	service: class				@Injectable()							@angular/core
+					
+	module: class					@NgModule()							@angular/core
+
+Binding:
+	passing data between code and view and vice versa
+a. data binding:
+	passing data from code to view
+	syntaxes:
+		template: {{property-of-the-class}} => interpolation
+
+b. event binding:
+	passing data from view to the component code
+   syntax:
+		template: <element-name (event-name)="method-of-the-class()">
+
+	element				property
+	-----------------------------
+	h2						title
+	span					title
+
+
+
+	
+

@@ -1,1 +1,14 @@
-<h1>Welcome to Angular</h1>
+<h2 class="header-style">
+    {{title}}
+</h2>
+<br>
+<div>
+    <label for="txtTitle">Enter Title: </label>
+    <input type="text" id="txtTitle" #txt>
+</div>
+<br>
+<button type="button" (click)="changeTitle(txt.value)">Change Title</button>
+<!--
+    cont txt =document.getElementById('txtTitle')
+    const val = txt.value
+-->
