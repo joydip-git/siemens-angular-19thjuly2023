@@ -1,0 +1,25 @@
+<div>
+    <label for="txtFirst">First Value: &nbsp; </label>
+    <!-- <input type="text" id="txtFirst" #first> -->
+    <!-- <input type="text" id="txtFirst" value="{{firstVal}}" #first (keyup)="updateFirstVal(+first.value)"
+        [style.width.px]="txtWidth"> -->
+    <!-- using two-way binding -->
+    <input type="text" id="txtFirst" [(ngModel)]="firstVal">
+</div>
+<div>
+    <label for="txtSecond">Second Value: &nbsp; </label>
+    <!-- <input type="text" id="txtSecond" #second> -->
+    <!-- <input type="text" id="txtSecond" [value]="secondVal" #second (keyup)="updateSecondVal(+second.value)"
+        [style.width.px]="txtWidth"> -->
+    <!-- using two-way binding -->
+    <input type="text" id="txtSecond" [(ngModel)]="secondVal">
+
+</div>
+<div>
+    <!-- <input type="button" value="Add" (click)="add(+(first.value), +(second.value))"> -->
+    <input type="button" value="Add" (click)="addNumbers()">
+</div>
+<div>
+    <label for="txtResult">Result: &nbsp; </label>
+    <input type="text" id="txtResult" readonly value="{{result}}">
+</div>

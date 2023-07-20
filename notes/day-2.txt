@@ -16,6 +16,7 @@ a. data binding:
 	passing data from code to view
 	syntaxes:
 		template: {{property-of-the-class}} => interpolation
+		template: <element-name [atr-name]="property-of-the-class"> => property binding
 
 b. event binding:
 	passing data from view to the component code
@@ -25,7 +26,41 @@ b. event binding:
 	element				property
 	-----------------------------
 	h2						title
-	span					title
+
+directive:
+	a. component directive: a directive with view (@Component())
+	b. attribute directive: they are used like an attribute with any existing element and extend the behavior of that element
+	c. structural directive: used to manipulate the dom elements
+
+@Directive({
+	selector:'[ngModel]'
+})
+export class NgModelDirective{
+	
+}
+
+@NgModule({
+	declarations:[NgModelDirective],
+	exports:[NgModelDirective]
+})
+export class FormsModule{
+}
+
+
+
+interface Directive{}
+interface Component extends Directive{}
+
+
+services:
+provider:
+injector: create instance of service, maintain it in a container and supply that to any other asset
+
+service instances:
+	asset level: a dedicated instance for an asset (register at the asset)
+	feature module level: an instance for all assets of a feature module (register at the feature module level)
+	root module level: a singelton instance for entire application (register at the root module level - app.module.ts)
+
 
 
 
