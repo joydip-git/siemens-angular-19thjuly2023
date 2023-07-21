@@ -23,8 +23,8 @@
 		c. passing data between any two components (rxjs)
 
 6. Making HTTP requests
-		- HttpClientModule
-		- HttpClient service class and its methods get(), post() etc..
+		- HttpClientModule [@angular/common/http]
+		- HttpClient service class [@angular/common/http] and its methods get(), post() etc..
 		- Observable, Observer, Subscription etc.
 
 7. Forms
@@ -100,6 +100,11 @@ pms-app structure:
 			cart
 
 			payments
+
+
+@Injectable(): every entity in angular which requires dependency injection of some service, must be decorated with @Injectable()
+since, components, directives, pipes, modules all use one or the other decorator, they all implement @Injectable() decorator by default
+in case of service, you should use that decorator explicitly
 
 		
 	
