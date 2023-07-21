@@ -19,7 +19,7 @@
 
 5. passing data between components:
 		a. passing data between parent and nested
-		b. passing data between tow routed components (navigation from one to another component)
+		b. passing data between two routed components (navigation from one to another component)
 		c. passing data between any two components (rxjs)
 
 6. Making HTTP requests
@@ -120,6 +120,18 @@ component lifecycle:
 
 event-name interface method
 X				OnX		ngOnX
+
+
+/home => HomeComponent
+/ => redirect => /home
+
+
+** => PNFc
+
+/products =>PLC
+/products/add => apc
+/products/view/1 => pvc
+/products/update/1 => upc
 
 
 		

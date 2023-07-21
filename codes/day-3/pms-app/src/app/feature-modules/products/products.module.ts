@@ -10,6 +10,48 @@ import { FormsModule } from '@angular/forms';
 import { FilterProductPipe } from './pipes/filter-product.pipe';
 import { FilterProductNameComponent } from './components/filter-product-name/filter-product-name.component';
 import { StarComponent } from './components/star/star.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const productRoutes: Routes = [
+  {
+    path: 'products',
+    children: [
+      {
+        path: '',
+        component: ProductListComponent
+      },
+      {
+        path: 'add',
+        component: AddProductComponent
+      },
+      {
+        path: 'view/:id',
+        component: ProductViewComponent
+      },
+      {
+        path: 'update/:id',
+        component: UpdateProductComponent
+      }
+    ]
+  },
+  // {
+  //   path: 'products',
+  //   component: ProductListComponent
+  // },
+  // {
+  //   path: 'products/add',
+  //   component: AddProductComponent
+  // },
+  // {
+  //   path: 'products/view/:id',
+  //   component: ProductViewComponent
+  // },
+  // {
+  //   path: 'products/update/:id',
+  //   component: UpdateProductComponent
+  // }
+]
+
 
 @NgModule({
   declarations: [
@@ -21,7 +63,13 @@ import { StarComponent } from './components/star/star.component';
     FilterProductNameComponent,
     StarComponent
   ],
-  imports: [HttpClientModule, CommonModule, FormsModule],
+  imports: [
+    HttpClientModule,
+    CommonModule,
+    FormsModule,
+    RouterModule.forChild(productRoutes)
+    //RouterModule.forRoot(productRoutes)
+  ],
   providers: [
     {
       provide: PRODUCT_SERVICE_TOKEN,
