@@ -55,6 +55,15 @@ product:
 	imageUrl:string, 
 	starRating:number, 
 	releaseDate:string
+	
+	categoryId:number,
+	category:Category
+
+category:
+	categoryid:
+	categoryname:string
+	products:category[]
+	
 
 
 
