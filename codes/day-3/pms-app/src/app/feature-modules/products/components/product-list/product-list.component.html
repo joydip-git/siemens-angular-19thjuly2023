@@ -11,6 +11,9 @@
 <div *ngIf="loadingComplete;else loading">
     <div *ngIf="errorMessage==='';else errMsg">
         <div *ngIf="products && products.length>0;else norecord">
+            <br>
+            <app-filter-product-name (filterValueChanged)="updateFilterValue($event)"></app-filter-product-name>
+            <br>
             <table class="table table-hover">
                 <tr class="thead-style">
                     <th>Image</th>
@@ -20,18 +23,18 @@
                     <th>Delete</th>
                 </tr>
                 <tbody class="table-dark">
-                    <tr *ngFor="let p of products">
+                    <tr *ngFor="let p of (products|productfilter:filterText)">
                         <td>
                             <img class="img-style" [src]="p.imageUrl" alt="NA">
                         </td>
                         <td>
-                            {{p.productName}}
+                            {{p.productName|uppercase}}
                         </td>
                         <td>
-                            {{p.price}}
+                            {{p.price|currency:'USD'}}
                         </td>
                         <td>
-                            {{p.starRating}}
+                            <app-star [rating]="p.starRating"></app-star>
                         </td>
                         <td>
                             <button class="btn btn-danger" type="button">Delete</button>

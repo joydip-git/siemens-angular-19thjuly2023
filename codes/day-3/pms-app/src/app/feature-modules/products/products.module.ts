@@ -6,15 +6,22 @@ import { UpdateProductComponent } from './components/update-product/update-produ
 import { PRODUCT_SERVICE_BASE_URL, PRODUCT_SERVICE_BASE_URL_TOKEN, PRODUCT_SERVICE_TOKEN, PRODUCT_SERVICE_TYPE } from 'src/app/utility/constants';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { FilterProductPipe } from './pipes/filter-product.pipe';
+import { FilterProductNameComponent } from './components/filter-product-name/filter-product-name.component';
+import { StarComponent } from './components/star/star.component';
 
 @NgModule({
   declarations: [
     ProductListComponent,
     ProductViewComponent,
     AddProductComponent,
-    UpdateProductComponent
+    UpdateProductComponent,
+    FilterProductPipe,
+    FilterProductNameComponent,
+    StarComponent
   ],
-  imports: [HttpClientModule, CommonModule],
+  imports: [HttpClientModule, CommonModule, FormsModule],
   providers: [
     {
       provide: PRODUCT_SERVICE_TOKEN,

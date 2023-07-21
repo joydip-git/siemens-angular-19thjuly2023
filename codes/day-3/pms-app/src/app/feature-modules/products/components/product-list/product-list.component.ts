@@ -17,10 +17,15 @@ export class ProductListComponent implements OnInit, OnDestroy {
   errorMessage = '';
   products?: Product[];
 
+  filterText = ''
+
   private productSubscription?: Subscription;
 
   constructor(@Inject(PRODUCT_SERVICE_TOKEN) private ps: IDataService) {
 
+  }
+  updateFilterValue(text: string) {
+    this.filterText = text
   }
   ngOnDestroy(): void {
     this.productSubscription?.unsubscribe()
