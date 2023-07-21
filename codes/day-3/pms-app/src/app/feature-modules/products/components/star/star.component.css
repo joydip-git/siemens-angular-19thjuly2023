@@ -1,3 +1,6 @@
 .inner-div {
   width: 100px;
 }
+.outer-div {
+  overflow: hidden;
+}

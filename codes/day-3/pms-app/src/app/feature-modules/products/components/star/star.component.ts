@@ -10,6 +10,6 @@ export class StarComponent implements OnChanges {
   divWidth = 100
 
   ngOnChanges() {
-    this.divWidth = this.starRating * 15.6
+    this.divWidth = this.starRating * 16.8
   }
 }
