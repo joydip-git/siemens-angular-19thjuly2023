@@ -106,6 +106,22 @@ pms-app structure:
 since, components, directives, pipes, modules all use one or the other decorator, they all implement @Injectable() decorator by default
 in case of service, you should use that decorator explicitly
 
+
+component lifecycle:
+	1. creation:
+			a. constructor
+			b. changes
+			c. init
+
+	2. changes
+
+	3. destruction:
+			destroy
+
+event-name interface method
+X				OnX		ngOnX
+
+
 		
 	
 

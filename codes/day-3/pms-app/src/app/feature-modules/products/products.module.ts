@@ -5,6 +5,7 @@ import { AddProductComponent } from './components/add-product/add-product.compon
 import { UpdateProductComponent } from './components/update-product/update-product.component';
 import { PRODUCT_SERVICE_BASE_URL, PRODUCT_SERVICE_BASE_URL_TOKEN, PRODUCT_SERVICE_TOKEN, PRODUCT_SERVICE_TYPE } from 'src/app/utility/constants';
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
     AddProductComponent,
     UpdateProductComponent
   ],
-  imports: [HttpClientModule],
+  imports: [HttpClientModule, CommonModule],
   providers: [
     {
       provide: PRODUCT_SERVICE_TOKEN,
