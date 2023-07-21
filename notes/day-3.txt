@@ -31,3 +31,35 @@
 		- template driven form
 		- Reactive Form
 
+
+
+URL											METHOD	ROUTE/REQ DATA			RETURNS
+http://127.0.0.1:3003/products		GET			---					{ message: "", data:[{},{}]}
+http://127.0.0.1:3003/products/{id}	GET			product id			{ message: "", data:{} }
+																						{ message: "", data:null }
+http://127.0.0.1:3003/products/{id}	DELETE		product id			{ message: "", data:[{}..]}
+																						{ message: "", data:null }
+
+http://127.0.0.1:3003/products		POST			product object		{ message: "", data:[{},{}]}
+																						{ message: "", data:null }
+
+http://127.0.0.1:3003/products/{id}	PUT		product id and object{ message: "", data:[{},{}]}
+																						{ message: "", data:null }
+product:
+
+	productId:number, 
+	productName:string, 
+	price:number, 
+	description:string, 
+	productCode:string, 
+	imageUrl:string, 
+	starRating:number, 
+	releaseDate:string
+
+
+
+
+
+
+
+
