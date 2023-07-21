@@ -63,6 +63,45 @@ category:
 	categoryid:
 	categoryname:string
 	products:category[]
+
+pms-app structure:
+
+	app
+		app.component.ts
+		app.component.html
+		app.component.css
+		app.module.ts
+
+		feature-modules
+			products
+				products.module.ts
+				components
+					product-list
+						product-list.component.ts
+						product-list.component.html
+						product-list.component.css
+
+					product-view
+						product-view.component.ts
+						product-view.component.html
+						product-view.component.css
+
+				services
+						product.service.ts
+
+				pipes
+						pipe-name.pipe.ts
+
+				directives
+						dir-name.directive.ts
+			
+			orders
+
+			cart
+
+			payments
+
+		
 	
 
 
